@@ -1,732 +1,1212 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Handwritten IIT-JEE PCM Notes | iiTuitions</title>
-    <meta name="description" content="Download 100% Handwritten IIT-JEE PCM Notes by Toppers. Used by 4000+ students. Instant Access.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IIT JEE Notes — Revise Full Syllabus in 20 Days | ₹799</title>
+<meta name="description" content="2,700+ handwritten IIT JEE notes by AIR <100 toppers. Reviewed by IIT Bombay Alumni Faculty. Physics, Chemistry, Maths. Instant PDF download.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0A0A0F;
+  --surface:#111119;
+  --surface-2:#1A1A25;
+  --surface-3:#22222F;
+  --accent:#FF6B2C;
+  --accent-glow:#FF8A50;
+  --accent-dark:#E5551A;
+  --green:#22C55E;
+  --green-soft:#16A34A;
+  --yellow:#FBBF24;
+  --red:#EF4444;
+  --red-soft:rgba(239,68,68,0.1);
+  --blue:#60A5FA;
+  --blue-bg:rgba(59,130,246,0.08);
+  --blue-border:rgba(59,130,246,0.2);
+  --text:#F1F1F5;
+  --text-dim:#9898A6;
+  --text-muted:#6B6B7B;
+  --border:#2A2A38;
+  --radius:16px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'DM Sans',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+}
+.container{max-width:700px;margin:0 auto;padding:0 18px;}
 
+/* ═══ CTA BUTTON ═══ */
+.cta-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;padding:18px 28px;
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;font-family:'Sora',sans-serif;
+  font-size:17px;font-weight:700;
+  border:none;border-radius:14px;cursor:pointer;
+  text-decoration:none;transition:all 0.2s ease;
+  box-shadow:0 4px 24px rgba(255,107,44,0.35);
+  position:relative;overflow:hidden;
+}
+.cta-btn::before{
+  content:'';position:absolute;top:0;left:-100%;
+  width:100%;height:100%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,0.18),transparent);
+  animation:shimmer 2.2s infinite;
+}
+@keyframes shimmer{100%{left:100%;}}
+.cta-btn:active{transform:scale(0.98);}
+.cta-sub{font-size:12px;color:var(--text-muted);margin-top:8px;text-align:center;}
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+.section-label{
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--accent);margin-bottom:10px;
+}
+.section-title{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(26px,5.5vw,38px);
+  font-weight:800;line-height:1.15;
+  letter-spacing:-0.02em;margin-bottom:14px;
+}
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: '#4F46E5', // Indigo
-                        accent: '#F59E0B', // Amber/Gold
-                        dark: '#0F172A',   // Slate
-                        whatsapp: '#10B981',
-                        offwhite: '#FDFDFC',
-                    },
-                    fontFamily: {
-                        serif: ['"Playfair Display"', 'serif'],
-                        sans: ['"Inter"', 'sans-serif'],
-                    },
-                    boxShadow: {
-                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.15)',
-                    }
-                }
-            }
-        }
-    </script>
+/* ═══ TRUST BAR ═══ */
+.trust-bar{
+  background:rgba(255,107,44,0.06);
+  border-bottom:1px solid rgba(255,107,44,0.12);
+  padding:9px 16px;text-align:center;
+  font-size:13px;font-weight:600;
+  color:var(--accent);
+  position:sticky;top:0;z-index:200;
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  display:flex;align-items:center;justify-content:center;
+  gap:16px;flex-wrap:wrap;
+  animation:fadeInDown 0.5s ease both;
+}
+.trust-bar .divider{width:1px;height:14px;background:rgba(255,255,255,0.1);}
+.trust-bar .dot{
+  display:inline-block;width:7px;height:7px;
+  background:var(--green);border-radius:50%;
+  margin-right:5px;animation:blink 1.5s ease infinite;
+}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:0.3;}}
+.trust-bar .iit{color:var(--blue);}
+.trust-bar .fomo-text{color:var(--text-dim);}
 
-    <style>
-        /* Custom Utilities */
-        .hide-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .hide-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .snap-mandatory {
-            scroll-snap-type: x mandatory;
-        }
-        .snap-center {
-            scroll-snap-align: center;
-        }
-    </style>
-    
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F13ZM9HDY4"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+/* ═══ SECTION 1: HERO ═══ */
+.hero{
+  padding:36px 0 32px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'';position:absolute;
+  top:-200px;left:50%;transform:translateX(-50%);
+  width:800px;height:800px;
+  background:radial-gradient(circle,rgba(255,107,44,0.07) 0%,transparent 65%);
+  pointer-events:none;
+}
 
-  gtag('config', 'G-F13ZM9HDY4');
-</script>
-    
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+.iit-badge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 20px;
+  background:var(--blue-bg);
+  border:1.5px solid var(--blue-border);
+  border-radius:12px;margin-bottom:20px;
+  animation:fadeInDown 0.5s ease both;
+}
+.iit-badge .icon{
+  width:32px;height:32px;
+  background:rgba(59,130,246,0.15);
+  border-radius:8px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:16px;
+}
+.iit-badge .text{text-align:left;line-height:1.2;}
+.iit-badge .text .top{
+  font-size:10px;font-weight:600;
+  color:var(--text-muted);text-transform:uppercase;
+  letter-spacing:0.08em;
+}
+.iit-badge .text .main{
+  font-family:'Sora',sans-serif;font-size:14px;
+  font-weight:700;color:var(--blue);
+}
 
-fbq('init', '1613503116361370');
-fbq('track', 'PageView');
+.hero h1{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(30px,7.5vw,48px);
+  font-weight:900;line-height:1.08;
+  letter-spacing:-0.03em;
+  margin-bottom:14px;
+  animation:fadeInUp 0.5s 0.05s ease both;
+}
+.hero h1 .highlight{
+  background:linear-gradient(135deg,var(--accent),#FF9A5C);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+  background-clip:text;
+}
+.hero-sub{
+  font-size:16px;color:var(--text-dim);
+  line-height:1.55;max-width:460px;
+  margin:0 auto 22px;
+  animation:fadeInUp 0.5s 0.1s ease both;
+}
 
-</script>
+.price-block{
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  margin-bottom:6px;
+  animation:fadeInUp 0.5s 0.15s ease both;
+}
+.price-row{display:flex;align-items:center;justify-content:center;gap:12px;}
+.price-row .old{font-size:22px;color:var(--text-muted);text-decoration:line-through;}
+.price-row .new{font-family:'Sora',sans-serif;font-size:42px;font-weight:800;color:var(--green);}
+.price-row .off-tag{
+  background:rgba(34,197,94,0.12);color:var(--green);
+  padding:4px 12px;border-radius:8px;font-size:13px;font-weight:700;
+}
+.price-value{font-size:12px;color:var(--text-muted);font-weight:500;}
+.price-value strong{color:var(--green);font-weight:700;}
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1613503116361370&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Meta Pixel Code -->
-    
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "vq300cwjs3");
-</script>
-   
+.urgency-strip{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:10px 16px;margin:12px auto 20px;max-width:340px;
+  background:var(--red-soft);
+  border:1.5px solid rgba(239,68,68,0.2);
+  border-radius:10px;
+  animation:fadeInUp 0.5s 0.18s ease both;
+}
+.urgency-strip .label{font-size:13px;font-weight:700;color:var(--red);}
+.urgency-strip .timer{
+  font-family:'Sora',sans-serif;font-size:20px;font-weight:800;
+  color:var(--red);letter-spacing:0.04em;min-width:60px;
+}
+
+/* ═══ NOTE PREVIEW CAROUSEL ═══ */
+.preview-section{
+  margin-top:8px;margin-bottom:6px;
+  animation:fadeInUp 0.5s 0.22s ease both;
+}
+.preview-header{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:12px;
+}
+.preview-label{
+  font-size:13px;color:var(--text-dim);font-weight:600;
+}
+.preview-swipe-hint{
+  font-size:11px;color:var(--text-muted);
+  display:flex;align-items:center;gap:4px;
+}
+
+/* Subject Tabs */
+.subject-tabs{
+  display:flex;gap:6px;justify-content:center;
+  margin-bottom:14px;
+}
+.subject-tab{
+  padding:8px 18px;
+  border-radius:100px;
+  font-family:'Sora',sans-serif;
+  font-size:13px;font-weight:600;
+  cursor:pointer;
+  border:1.5px solid var(--border);
+  background:transparent;
+  color:var(--text-muted);
+  transition:all 0.25s ease;
+  user-select:none;
+}
+.subject-tab.active{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+  box-shadow:0 2px 12px rgba(255,107,44,0.3);
+}
+.subject-tab:not(.active):hover{
+  border-color:var(--text-muted);
+  color:var(--text-dim);
+}
+/* Color hints for each tab when active */
+.subject-tab[data-subject="physics"].active{background:#3B82F6;border-color:#3B82F6;box-shadow:0 2px 12px rgba(59,130,246,0.3);}
+.subject-tab[data-subject="chemistry"].active{background:#8B5CF6;border-color:#8B5CF6;box-shadow:0 2px 12px rgba(139,92,246,0.3);}
+.subject-tab[data-subject="maths"].active{background:#16A34A;border-color:#16A34A;box-shadow:0 2px 12px rgba(22,163,74,0.3);}
+
+/* Carousel Container */
+.carousel-wrapper{
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+}
+.carousel-panels{
+  position:relative;
+}
+.carousel-panel{
+  display:none;
+}
+.carousel-panel.active{
+  display:block;
+}
+
+/* Horizontal scroll track */
+.carousel-track{
+  display:flex;
+  gap:10px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+  padding:4px 2px;
+}
+.carousel-track::-webkit-scrollbar{display:none;}
+
+/* Individual note image card */
+.note-slide{
+  flex:0 0 calc(75% - 5px);
+  scroll-snap-align:start;
+  border-radius:12px;
+  overflow:hidden;
+  border:1px solid var(--border);
+  background:var(--surface);
+  position:relative;
+  aspect-ratio:3/4;
+}
+.note-slide img{
+  width:100%;height:100%;
+  object-fit:cover;
+  display:block;
+}
+/* Placeholder until real images are added */
+.note-slide .img-placeholder{
+  width:100%;height:100%;
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface-2) 50%,var(--surface-3) 100%);
+  display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  gap:8px;padding:20px;
+}
+.note-slide .img-placeholder .ph-icon{font-size:36px;opacity:0.6;}
+.note-slide .img-placeholder .ph-text{
+  font-size:12px;color:var(--text-muted);
+  text-align:center;line-height:1.4;
+}
+.note-slide .img-placeholder .ph-filename{
+  font-size:10px;color:var(--text-muted);
+  opacity:0.5;font-family:monospace;
+  background:rgba(255,255,255,0.05);
+  padding:3px 8px;border-radius:4px;
+  margin-top:4px;
+}
+
+/* Caption overlay on each slide */
+.note-slide .caption{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:10px 12px;
+  background:linear-gradient(transparent,rgba(0,0,0,0.85));
+  display:flex;align-items:center;justify-content:space-between;
+}
+.note-slide .caption .tag{
+  font-size:11px;font-weight:600;color:#fff;
+}
+.note-slide .caption .page-num{
+  font-size:10px;color:rgba(255,255,255,0.5);
+}
+
+/* Dot indicators */
+.carousel-dots{
+  display:flex;justify-content:center;gap:6px;
+  margin-top:10px;
+}
+.carousel-dot{
+  width:8px;height:8px;
+  border-radius:50%;
+  background:var(--border);
+  transition:all 0.25s ease;
+  cursor:pointer;
+}
+.carousel-dot.active{
+  background:var(--accent);
+  width:20px;
+  border-radius:4px;
+}
+/* Match dot color to subject */
+.carousel-panel[data-subject="physics"] .carousel-dot.active{background:#3B82F6;}
+.carousel-panel[data-subject="chemistry"] .carousel-dot.active{background:#8B5CF6;}
+.carousel-panel[data-subject="maths"] .carousel-dot.active{background:#16A34A;}
+
+.hero-cta-wrap{margin-top:22px;animation:fadeInUp 0.5s 0.3s ease both;}
+
+.stats-row{
+  display:flex;justify-content:center;gap:22px;
+  margin-top:24px;padding-top:18px;
+  border-top:1px solid var(--border);
+  animation:fadeInUp 0.5s 0.35s ease both;
+}
+.stat{text-align:center;}
+.stat .val{font-family:'Sora',sans-serif;font-size:20px;font-weight:700;}
+.stat .lbl{font-size:11px;color:var(--text-muted);margin-top:1px;}
+
+/* ═══ SECTION DIVIDER ═══ */
+.section-line{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);}
+
+/* ═══ SECTION 2: WHAT'S INSIDE ═══ */
+.inside{padding:40px 0;}
+.subject-cards{display:flex;flex-direction:column;gap:14px;margin-top:22px;}
+.subject-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  display:grid;grid-template-columns:48px 1fr;gap:16px;
+  transition:border-color 0.3s ease;
+}
+.subject-card:hover{border-color:rgba(255,107,44,0.3);}
+.subject-icon{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.subject-icon.phy{background:rgba(59,130,246,0.12);color:#60A5FA;}
+.subject-icon.chem{background:rgba(168,85,247,0.12);color:#C084FC;}
+.subject-icon.math{background:rgba(34,197,94,0.12);color:#4ADE80;}
+.subject-info h3{font-family:'Sora',sans-serif;font-size:17px;font-weight:700;margin-bottom:3px;}
+.subject-pages{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:8px;}
+.subject-bullets{list-style:none;display:flex;flex-direction:column;gap:5px;}
+.subject-bullets li{
+  font-size:13px;color:var(--text-dim);
+  padding-left:18px;position:relative;line-height:1.4;
+}
+.subject-bullets li::before{
+  content:'✓';position:absolute;left:0;
+  color:var(--green);font-weight:700;font-size:12px;
+}
+.total-banner{
+  margin-top:18px;
+  background:linear-gradient(135deg,rgba(255,107,44,0.08),rgba(255,107,44,0.03));
+  border:1px solid rgba(255,107,44,0.15);
+  border-radius:12px;padding:14px 20px;
+  display:flex;align-items:center;justify-content:center;gap:12px;
+}
+.total-banner .num{font-family:'Outfit',sans-serif;font-size:34px;font-weight:800;color:var(--accent);}
+.total-banner .lbl{font-size:13px;color:var(--text-dim);text-align:left;line-height:1.3;}
+.total-banner .lbl strong{color:var(--text);}
+
+/* ═══ SECTION 3: PROOF ═══ */
+.proof{padding:40px 0;}
+.score-jump{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:26px 20px;
+  text-align:center;margin-bottom:14px;
+  position:relative;overflow:hidden;
+}
+.score-jump .top-line{
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--accent),var(--green));
+}
+.score-jump .arrow-row{
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin-bottom:12px;
+}
+.score-block{text-align:center;}
+.score-block .score-label{
+  font-size:11px;color:var(--text-muted);
+  text-transform:uppercase;letter-spacing:0.1em;
+  margin-bottom:2px;font-weight:600;
+}
+.score-block .score-num{font-family:'Outfit',sans-serif;font-weight:800;}
+.score-block .score-num.before{font-size:36px;color:var(--text-muted);}
+.score-block .score-num.after{font-size:46px;color:var(--green);}
+.score-arrow{font-size:26px;color:var(--accent);animation:pulse 1.5s ease infinite;}
+@keyframes pulse{0%,100%{opacity:0.4;}50%{opacity:1;}}
+.score-quote{font-size:13px;color:var(--text-muted);font-style:italic;max-width:330px;margin:0 auto;}
+
+.revision-time{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px;
+  display:flex;align-items:center;justify-content:center;gap:18px;
+  margin-bottom:14px;
+}
+.time-block{text-align:center;flex:1;}
+.time-block .time-val{font-family:'Outfit',sans-serif;font-size:30px;font-weight:800;}
+.time-block .time-val.slow{color:var(--text-muted);}
+.time-block .time-val.fast{color:var(--green);}
+.time-block .time-lbl{font-size:11px;color:var(--text-muted);margin-top:2px;}
+.vs-divider{
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  color:var(--text-muted);background:var(--surface-2);
+  border-radius:50%;width:34px;height:34px;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;border:1px solid var(--border);
+}
+
+.wa-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px;}
+.wa-screenshot{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;aspect-ratio:9/16;
+  display:flex;align-items:center;justify-content:center;overflow:hidden;
+}
+.wa-placeholder{
+  display:flex;flex-direction:column;align-items:center;
+  gap:4px;color:var(--text-muted);font-size:11px;text-align:center;
+}
+.wa-placeholder .wa-icon{font-size:24px;}
+.wa-caption{text-align:center;font-size:11px;color:var(--text-muted);margin-bottom:16px;}
+
+.testimonial{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:22px;display:flex;gap:14px;
+}
+.testimonial-avatar{
+  width:46px;height:46px;border-radius:50%;
+  background:linear-gradient(135deg,#3B82F6,#8B5CF6);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;font-size:16px;flex-shrink:0;
+}
+.testimonial-stars{color:var(--yellow);font-size:13px;margin-bottom:6px;letter-spacing:1px;}
+.testimonial-text{font-size:14px;color:var(--text-dim);line-height:1.55;margin-bottom:8px;}
+.testimonial-name{font-family:'Sora',sans-serif;font-size:13px;font-weight:700;}
+.testimonial-tag{font-size:11px;color:var(--accent);font-weight:600;}
+
+/* ═══ SECTION 4: PRICING ═══ */
+.pricing{padding:40px 0;text-align:center;}
+.pricing-card{
+  background:var(--surface);border:2px solid var(--accent);
+  border-radius:20px;padding:30px 24px;
+  max-width:450px;margin:0 auto;position:relative;
+  box-shadow:0 0 70px rgba(255,107,44,0.08);
+}
+.pricing-card-badge{
+  position:absolute;top:-13px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--accent),var(--accent-dark));
+  color:#fff;padding:5px 18px;border-radius:100px;
+  font-family:'Sora',sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:0.06em;text-transform:uppercase;white-space:nowrap;
+}
+.pricing-title{
+  font-family:'Outfit',sans-serif;font-size:21px;font-weight:800;
+  margin-top:8px;margin-bottom:18px;
+}
+.pricing-items{text-align:left;display:flex;flex-direction:column;gap:10px;margin-bottom:22px;}
+.pricing-item{
+  display:flex;align-items:flex-start;gap:9px;
+  font-size:14px;color:var(--text-dim);line-height:1.4;
+}
+.pricing-item .check{color:var(--green);font-weight:700;font-size:14px;flex-shrink:0;margin-top:1px;}
+.pricing-item strong{color:var(--text);}
+.pricing-item .free-badge{
+  background:rgba(34,197,94,0.12);color:var(--green);
+  padding:1px 7px;border-radius:4px;
+  font-size:10px;font-weight:700;margin-left:3px;
+}
+.pricing-item .iit-tag{
+  background:var(--blue-bg);color:var(--blue);
+  padding:1px 7px;border-radius:4px;
+  font-size:10px;font-weight:700;margin-left:3px;
+}
+
+.pricing-divider{border:none;border-top:1px solid var(--border);margin-bottom:20px;}
+.pricing-price{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:4px;}
+.pricing-price .old{font-size:22px;color:var(--text-muted);text-decoration:line-through;}
+.pricing-price .new{font-family:'Outfit',sans-serif;font-size:50px;font-weight:900;color:var(--green);}
+.pricing-save{font-size:12px;color:var(--green);font-weight:600;margin-bottom:4px;}
+.pricing-per-page{font-size:12px;color:var(--text-muted);margin-bottom:14px;}
+.pricing-per-page strong{color:var(--green);font-weight:700;}
+
+.pricing-urgency{
+  background:var(--red-soft);
+  border:1.5px solid rgba(239,68,68,0.2);
+  border-radius:10px;padding:10px 14px;margin-bottom:16px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.pricing-urgency .fire{font-size:15px;}
+.pricing-urgency .text{font-size:12px;font-weight:700;color:var(--red);}
+.pricing-urgency .timer{
+  font-family:'Sora',sans-serif;font-size:16px;font-weight:800;
+  color:var(--red);letter-spacing:0.04em;
+}
+
+.pricing-fomo{
+  display:flex;align-items:center;justify-content:center;gap:5px;
+  font-size:12px;color:var(--text-muted);margin-top:14px;
+}
+.pricing-fomo .dot{
+  display:inline-block;width:6px;height:6px;
+  background:var(--green);border-radius:50%;animation:blink 1.5s ease infinite;
+}
+.pricing-fomo strong{color:var(--text-dim);}
+
+.parent-trust{
+  margin-top:16px;padding-top:14px;
+  border-top:1px solid var(--border);
+  display:flex;flex-direction:column;gap:7px;align-items:center;
+}
+.parent-trust .line{
+  font-size:12px;color:var(--text-muted);
+  display:flex;align-items:center;gap:6px;
+}
+.parent-trust .line .icon{font-size:14px;}
+
+/* ═══ SECTION 5: FAQ ═══ */
+.faq{padding:40px 0 24px;}
+.faq-list{display:flex;flex-direction:column;gap:8px;margin-top:20px;margin-bottom:32px;}
+.faq-item{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:12px;overflow:hidden;transition:border-color 0.3s ease;
+}
+.faq-item:hover{border-color:rgba(255,107,44,0.2);}
+.faq-q{
+  padding:15px 18px;display:flex;
+  align-items:center;justify-content:space-between;
+  cursor:pointer;font-size:14px;font-weight:600;
+  user-select:none;gap:10px;
+}
+.faq-q .arrow{font-size:16px;color:var(--text-muted);transition:transform 0.25s ease;flex-shrink:0;}
+.faq-item.open .faq-q .arrow{transform:rotate(180deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.3s ease;}
+.faq-item.open .faq-a{max-height:220px;}
+.faq-a-inner{padding:0 18px 15px;font-size:13px;color:var(--text-dim);line-height:1.65;}
+
+/* Final CTA */
+.final-cta{text-align:center;padding:28px 0 44px;position:relative;}
+.final-cta::before{
+  content:'';position:absolute;bottom:0;left:50%;transform:translateX(-50%);
+  width:600px;height:400px;
+  background:radial-gradient(circle,rgba(255,107,44,0.05) 0%,transparent 70%);
+  pointer-events:none;
+}
+.final-headline{
+  font-family:'Outfit',sans-serif;
+  font-size:clamp(22px,5vw,32px);font-weight:800;
+  line-height:1.2;margin-bottom:8px;
+}
+.final-sub{
+  font-size:14px;color:var(--text-dim);margin-bottom:16px;
+  max-width:400px;margin-left:auto;margin-right:auto;line-height:1.55;
+}
+.final-timer-row{
+  display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:16px;
+}
+.final-timer-row .label{font-size:12px;color:var(--red);font-weight:600;}
+.final-timer-row .timer{
+  font-family:'Sora',sans-serif;font-size:17px;font-weight:800;
+  color:var(--red);background:var(--red-soft);
+  padding:3px 12px;border-radius:6px;border:1px solid rgba(239,68,68,0.2);
+}
+
+footer{padding:24px 0;border-top:1px solid var(--border);text-align:center;}
+footer .brand{font-family:'Sora',sans-serif;font-weight:700;font-size:14px;color:var(--text-dim);margin-bottom:6px;}
+footer .links{display:flex;gap:16px;justify-content:center;margin-bottom:8px;}
+footer .links a{color:var(--text-muted);text-decoration:none;font-size:12px;transition:color 0.2s;}
+footer .links a:hover{color:var(--text);}
+footer .copy{font-size:11px;color:var(--text-muted);}
+
+.wa-float{
+  position:fixed;bottom:20px;right:20px;
+  width:54px;height:54px;background:#25D366;
+  border-radius:50%;display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(37,211,102,0.4);
+  z-index:100;text-decoration:none;transition:transform 0.2s;
+  animation:fadeInUp 0.5s 0.8s ease both;
+}
+.wa-float:hover{transform:scale(1.08);}
+.wa-float svg{width:26px;height:26px;fill:#fff;}
+
+@keyframes fadeInUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+@keyframes fadeInDown{from{opacity:0;transform:translateY(-8px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(24px);transition:all 0.5s ease;}
+.reveal.visible{opacity:1;transform:translateY(0);}
+
+@media(max-width:480px){
+  .container{padding:0 14px;}
+  .hero{padding:28px 0 24px;}
+  .trust-bar{font-size:11px;gap:8px;padding:8px 12px;}
+  .trust-bar .divider{display:none;}
+  .iit-badge{padding:8px 14px;gap:8px;}
+  .iit-badge .icon{width:28px;height:28px;font-size:14px;border-radius:6px;}
+  .iit-badge .text .main{font-size:13px;}
+  .note-slide{flex:0 0 calc(80% - 5px);}
+  .stats-row{gap:14px;}
+  .stat .val{font-size:17px;}
+  .subject-card{grid-template-columns:1fr;gap:10px;}
+  .subject-icon{width:40px;height:40px;font-size:18px;border-radius:10px;}
+  .wa-grid{gap:5px;}
+  .testimonial{flex-direction:column;gap:10px;}
+  .revision-time{gap:10px;}
+  .pricing-card{padding:24px 18px;}
+  .pricing-price .new{font-size:42px;}
+  .price-row .new{font-size:36px;}
+  .subject-tab{padding:7px 14px;font-size:12px;}
+}
+</style>
 </head>
-<body class="bg-offwhite text-dark font-sans antialiased pb-24">
+<body>
 
-    <nav class="fixed top-0 w-full z-40 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="text-2xl font-serif font-bold text-brand tracking-tight">IIT JEE Note</div>
-            <a href="#pricing" class="bg-accent text-white text-sm font-bold px-4 py-2 rounded-full hover:bg-amber-600 transition shadow-lg flex items-center gap-2">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                Instant Access
-            </a>
-        </div>
-    </nav>
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <span class="iit">🎓 Reviewed by IIT Bombay Alumni Faculty</span>
+  <span class="divider"></span>
+  <span class="fomo-text"><span class="dot"></span><span id="fomo-count">73</span> parents purchased in the last 8 hours</span>
+</div>
 
-    <header class="pt-28 pb-12 px-4 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-64 h-64 bg-indigo-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob"></div>
-        <div class="absolute top-0 left-0 w-64 h-64 bg-amber-100 rounded-full mix-blend-multiply filter blur-3xl opacity-50 animate-blob animation-delay-2000"></div>
+<!-- ═══════════════════════════════════════════
+     SECTION 1: HERO
+     ═══════════════════════════════════════════ -->
+<section class="hero" id="top">
+  <div class="container">
 
-        <div class="max-w-4xl mx-auto text-center relative z-10">
-            
-            <span class="inline-block bg-red-100 text-red-700 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest mb-6 animate-pulse">
-                ⚠️ Only for JEE 2025–26 Students
-            </span>
-
-            <h1 class="font-serif text-5xl md:text-7xl font-bold leading-tight mb-4 text-slate-900 tracking-tight">
-                Revise the Entire JEE Syllabus<br>
-                in <span class="text-brand">20 Days</span>
-            </h1>
-            
-            <p class="text-gray-800 text-lg md:text-xl font-medium mb-2">
-                Topper-Style Handwritten Notes (PDF Bundle).<br>
-                <span class="font-bold text-gray-900">100% NTA-Aligned & Errorless.</span>
-            </p>
-            
-            <p class="text-lg md:text-xl font-bold mb-6">
-                <span class="text-gray-400 line-through mr-2">₹1999</span> <span class="text-accent text-4xl">₹799</span>
-            </p>
-
-            <div class="flex flex-col md:flex-row items-center justify-center gap-3 mb-8">
-                <div class="bg-green-50 border border-green-200 text-green-800 px-4 py-2 rounded-full text-sm font-bold flex items-center gap-2 shadow-sm">
-                    <span class="bg-green-600 text-white rounded-full p-0.5">
-                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"></path></svg>
-                    </span>
-                    Reviewed by IIT Bombay Alumni Faculty
-                </div>
-                <div class="text-gray-500 text-sm font-semibold">
-                    Joined by <span class="text-dark font-bold">4,312+ Students</span>
-                </div>
-            </div>
-
-            <p class="text-red-500 font-bold mb-8 flex items-center justify-center gap-2 animate-pulse text-sm md:text-base">
-                🔥 Only 29 bundles left today — price increases soon
-            </p>
-
-            <div class="mb-10 flex flex-col items-center">
-                <p class="text-xs uppercase text-gray-500 font-bold tracking-widest mb-3">JEE Main 2026 — Jan 21</p>
-                <div id="jee-timer" class="flex gap-4 text-center">
-                    <div class="bg-gray-900 text-white p-3 rounded-lg w-20 shadow-xl"><span class="block text-3xl font-bold" id="days">00</span><span class="text-xs text-gray-400">Days</span></div>
-                    <div class="bg-gray-900 text-white p-3 rounded-lg w-20 shadow-xl"><span class="block text-3xl font-bold" id="hours">00</span><span class="text-xs text-gray-400">Hrs</span></div>
-                    <div class="bg-gray-900 text-white p-3 rounded-lg w-20 shadow-xl"><span class="block text-3xl font-bold" id="mins">00</span><span class="text-xs text-gray-400">Mins</span></div>
-                </div>
-            </div>
-
-            <div class="relative w-full max-w-4xl mx-auto h-[500px] md:h-[650px] rounded-xl shadow-2xl shadow-indigo-500/20 overflow-hidden mb-10 border-4 border-white ring-1 ring-gray-100 bg-gray-50">
-                <div class="flex transition-transform duration-500 ease-out h-full" id="hero-slider">
-                    <div class="min-w-full h-full flex items-center justify-center relative p-2">
-                        <img src="pp1.jpg" alt="Physics Note Teaser" class="h-full w-auto object-contain rounded shadow-md">
-                        <div class="absolute bottom-4 bg-black/70 text-white px-4 py-2 text-sm font-semibold rounded-full backdrop-blur-md">Clean Diagrams</div>
-                    </div>
-                    <div class="min-w-full h-full flex items-center justify-center relative p-2">
-                        <img src="ccc1.jpg" alt="Chemistry Note Teaser" class="h-full w-auto object-contain rounded shadow-md">
-                        <div class="absolute bottom-4 bg-black/70 text-white px-4 py-2 text-sm font-semibold rounded-full backdrop-blur-md">Topper Handwriting</div>
-                    </div>
-                    <div class="min-w-full h-full flex items-center justify-center relative p-2">
-                        <img src="mmm1.jpg" alt="Maths Note Teaser" class="h-full w-auto object-contain rounded shadow-md">
-                        <div class="absolute bottom-4 bg-black/70 text-white px-4 py-2 text-sm font-semibold rounded-full backdrop-blur-md">Shortcut Methods</div>
-                    </div>
-                </div>
-            </div>
-
-            <a href="https://payments.cashfree.com/forms?code=iit-jee-pcm-799-notes" target="_blank" class="inline-flex items-center justify-center gap-2 bg-accent hover:bg-amber-600 text-white text-xl font-bold py-4 px-12 rounded-full shadow-xl shadow-amber-500/30 transform hover:scale-105 transition duration-200 w-full md:w-auto animate-pulse">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                GET INSTANT ACCESS ⚡
-            </a>
-            <p class="mt-3 text-sm font-bold text-gray-500">📥 PDF Link sent to email in 10 seconds. Lifetime Access.</p>
-        </div>
-    </header>
-
-    <section class="py-10 bg-white border-y border-gray-100">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        
-        <div class="p-4 bg-gray-50 rounded-xl flex flex-col items-center">
-            <img src="h1.png" alt="Handwritten Icon" class="w-12 h-12 mb-3">
-            
-            <h3 class="font-bold text-dark">100% Handwritten</h3>
-            <p class="text-xs text-gray-500">By AIR < 100 Toppers</p>
-        </div>
-            <div class="p-4 bg-gray-50 rounded-xl">
-                <div class="text-3xl mb-2">📚</div>
-                <h3 class="font-bold text-dark">Complete Syllabus</h3>
-                <p class="text-xs text-gray-500">11th & 12th Covered</p>
-            </div>
-            
-           <div class="p-4 bg-gray-50 rounded-xl flex flex-col items-center">
-            <img src="h2.png" alt="Rocket Icon" class="w-12 h-12 mb-3">
-            
-            <h3 class="font-bold text-dark">+50 Marks</h3>
-            <p class="text-xs text-gray-500">Proven Strategy</p>
-        </div>
-
-        <div class="p-4 bg-gray-50 rounded-xl flex flex-col items-center">
-            <img src="h3.png" alt="Students Icon" class="w-12 h-12 mb-3">
-            
-            <h3 class="font-bold text-dark">4312+ Students</h3>
-            <p class="text-xs text-gray-500">Trust iiTuitions</p>
-        </div>
-
+    <div class="iit-badge">
+      <div class="icon">🎓</div>
+      <div class="text">
+        <div class="top">Verified & Reviewed by</div>
+        <div class="main">IIT Bombay Alumni Faculty</div>
+      </div>
     </div>
+
+    <h1>Revise Full JEE Syllabus<br>in <span class="highlight">20 Days</span></h1>
+
+    <p class="hero-sub">Topper-style handwritten PCM notes (PDF). 2,700+ pages. 100% NTA-aligned. Instant download. Printable.</p>
+
+    <div class="price-block">
+      <div class="price-row">
+        <span class="old">₹2,499</span>
+        <span class="new">₹799</span>
+        <span class="off-tag">68% OFF</span>
+      </div>
+      <div class="price-value">That's just <strong>₹0.29 per page</strong> — less than a photocopy</div>
+    </div>
+
+    <div class="urgency-strip">
+      <span class="label">⏰ Offer expires in</span>
+      <span class="timer" id="offer-timer-hero">15:00</span>
+    </div>
+
+    <!-- ═══ NOTE PREVIEW CAROUSEL ═══ -->
+    <div class="preview-section">
+      <div class="preview-header">
+        <span class="preview-label">👇 See actual pages from the notes</span>
+        <span class="preview-swipe-hint">← Swipe →</span>
+      </div>
+
+      <!-- Subject Tabs -->
+      <div class="subject-tabs">
+        <button class="subject-tab active" data-subject="physics" onclick="switchSubject('physics')">⚛️ Physics</button>
+        <button class="subject-tab" data-subject="chemistry" onclick="switchSubject('chemistry')">🧪 Chemistry</button>
+        <button class="subject-tab" data-subject="maths" onclick="switchSubject('maths')">📐 Maths</button>
+      </div>
+
+      <div class="carousel-panels">
+
+        <!-- PHYSICS — 3 images -->
+        <div class="carousel-panel active" data-subject="physics" id="panel-physics">
+          <div class="carousel-track" onscroll="updateDots('physics')">
+            <div class="note-slide">
+              <!-- REPLACE: <img src="physics-1.jpg" alt="Physics diagram - Optics ray diagram"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">📊</span>
+                <span class="ph-text">Circuit / Optics Diagram<br>Clean hand-drawn visuals</span>
+                <span class="ph-filename">physics-1.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Clean Diagrams</span>
+                <span class="page-num">Page 1 of 750</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="physics-2.jpg" alt="Physics derivation - step by step"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">📝</span>
+                <span class="ph-text">Step-by-step Derivation<br>Full working shown</span>
+                <span class="ph-filename">physics-2.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Full Derivations</span>
+                <span class="page-num">Page 2 of 750</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="physics-3.jpg" alt="Physics formula cheat sheet"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">⚡</span>
+                <span class="ph-text">Formula Cheat Sheet<br>Quick revision page</span>
+                <span class="ph-filename">physics-3.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Formula Sheet</span>
+                <span class="page-num">Page 3 of 750</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots" id="dots-physics">
+            <span class="carousel-dot active"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+          </div>
+        </div>
+
+        <!-- CHEMISTRY — 3 images -->
+        <div class="carousel-panel" data-subject="chemistry" id="panel-chemistry">
+          <div class="carousel-track" onscroll="updateDots('chemistry')">
+            <div class="note-slide">
+              <!-- REPLACE: <img src="chemistry-1.jpg" alt="Organic reaction mechanism"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">🔬</span>
+                <span class="ph-text">Organic Reaction Mechanism<br>Arrow-pushing explained</span>
+                <span class="ph-filename">chemistry-1.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Reaction Mechanisms</span>
+                <span class="page-num">Page 1 of 1,247</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="chemistry-2.jpg" alt="Inorganic chemistry chart"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">📋</span>
+                <span class="ph-text">Inorganic Chart / Table<br>All exceptions covered</span>
+                <span class="ph-filename">chemistry-2.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Inorganic Charts</span>
+                <span class="page-num">Page 2 of 1,247</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="chemistry-3.jpg" alt="Physical chemistry numerical"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">🧮</span>
+                <span class="ph-text">Physical Chemistry Numerical<br>Solved step-by-step</span>
+                <span class="ph-filename">chemistry-3.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Solved Numericals</span>
+                <span class="page-num">Page 3 of 1,247</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots" id="dots-chemistry">
+            <span class="carousel-dot active"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+          </div>
+        </div>
+
+        <!-- MATHS — 3 images -->
+        <div class="carousel-panel" data-subject="maths" id="panel-maths">
+          <div class="carousel-track" onscroll="updateDots('maths')">
+            <div class="note-slide">
+              <!-- REPLACE: <img src="maths-1.jpg" alt="Coordinate geometry graphs"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">📈</span>
+                <span class="ph-text">Coordinate Geometry<br>Graphs & visual methods</span>
+                <span class="ph-filename">maths-1.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Visual Methods</span>
+                <span class="page-num">Page 1 of 726</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="maths-2.jpg" alt="Integration calculus solved"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">∫</span>
+                <span class="ph-text">Integration / Calculus<br>Solved with shortcuts</span>
+                <span class="ph-filename">maths-2.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">Calculus Shortcuts</span>
+                <span class="page-num">Page 2 of 726</span>
+              </div>
+            </div>
+            <div class="note-slide">
+              <!-- REPLACE: <img src="maths-3.jpg" alt="Maths tricks and PYQs"> -->
+              <div class="img-placeholder">
+                <span class="ph-icon">💡</span>
+                <span class="ph-text">Tricks + Marked PYQs<br>Exam-focused shortcuts</span>
+                <span class="ph-filename">maths-3.jpg</span>
+              </div>
+              <div class="caption">
+                <span class="tag">PYQ Shortcuts</span>
+                <span class="page-num">Page 3 of 726</span>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-dots" id="dots-maths">
+            <span class="carousel-dot active"></span>
+            <span class="carousel-dot"></span>
+            <span class="carousel-dot"></span>
+          </div>
+        </div>
+
+      </div><!-- /carousel-panels -->
+    </div><!-- /preview-section -->
+
+    <!-- CTA after seeing previews -->
+    <div class="hero-cta-wrap">
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">📥 PDF link sent to email in 10 seconds · Lifetime access · 100% Printable</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat"><div class="val">4,312+</div><div class="lbl">Students</div></div>
+      <div class="stat"><div class="val">2,700+</div><div class="lbl">Pages</div></div>
+      <div class="stat"><div class="val">AIR &lt;100</div><div class="lbl">Toppers</div></div>
+    </div>
+  </div>
 </section>
 
-    <section class="py-16 px-4 bg-offwhite">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-3xl font-bold text-center mb-2">See Inside The Notes</h2>
-            <p class="text-center text-gray-600 mb-8">Real scanned pages. Clarity guaranteed.</p>
+<div class="section-line"></div>
 
-            <div class="flex justify-center gap-4 mb-6">
-                <button onclick="switchTab('phy')" id="btn-phy" class="tab-btn px-6 py-2 rounded-full font-bold bg-brand text-white shadow-lg transition">Physics</button>
-                <button onclick="switchTab('chem')" id="btn-chem" class="tab-btn px-6 py-2 rounded-full font-bold bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 transition">Chemistry</button>
-                <button onclick="switchTab('math')" id="btn-math" class="tab-btn px-6 py-2 rounded-full font-bold bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 transition">Maths</button>
-            </div>
+<!-- ═══════════════════════════════════════════
+     SECTION 2: WHAT'S INSIDE
+     ═══════════════════════════════════════════ -->
+<section class="inside" id="inside">
+  <div class="container">
+    <div class="section-label reveal">What's Inside</div>
+    <h2 class="section-title reveal">Every chapter. Every concept.</h2>
 
-            <div class="relative min-h-[400px] md:min-h-[500px]">
-                
-               <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"></div>
-
-<script>
-const phyContainer = document.getElementById("phy-slides");
-
-for (let i = 2; i <= 6; i++) {
-    const div = document.createElement("div");
-    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
-
-    div.innerHTML = `<img src="ppp${i}.jpg" class="w-full h-[600px] object-contain bg-white" alt="Physics Sample ${i}">`;
-
-    phyContainer.appendChild(div);
-}
-</script>
-
-<div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"> </div>
-
-<script>
-const chemContainer = document.getElementById("chem-slides");
-
-for (let i = 1; i <= 5; i++) {
-    const div = document.createElement("div");
-    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
-
-    div.innerHTML = `<img src="ccc${i}.jpg" class="w-full h-[680px] object-contain bg-white" alt="Chemistry Sample ${i}">`;;
-
-    chemContainer.appendChild(div);
-}
-</script>
-
-<div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"> </div>
-    
-<script>
-const mathContainer = document.getElementById("math-slides");
-
-for (let i = 1; i <= 5; i++) {  
-    const div = document.createElement("div");
-    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
-
-    div.innerHTML = `<img src="mmm${i}.jpg" class="w-full h-[680px] object-contain bg-white" alt="Maths Sample ${i}">`;;
-
-    mathContainer.appendChild(div);
-}
-</script>
-
-                
-                <p class="text-center text-xs text-gray-400 mt-2">← Swipe to see more pages →</p>
-            </div>
+    <div class="subject-cards">
+      <div class="subject-card reveal">
+        <div class="subject-icon phy">⚛️</div>
+        <div class="subject-info">
+          <h3>Physics</h3>
+          <div class="subject-pages">750 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Mechanics to Modern Physics — full coverage</li>
+            <li>Every derivation with step-by-step diagrams</li>
+            <li>Bonus: 40-page formula cheat sheet</li>
+          </ul>
         </div>
-    </section>
-
-
-
-
-
-
-    
-
-    <section class="py-16 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-3xl font-bold text-center mb-2">Results & Success Stories</h2>
-            <p class="text-center text-gray-600 mb-10">Real students. Real Ranks.</p>
-            
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
-                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                    <img src="stu1.jpg" alt="Sri Charan IIT Bombay" class="w-full h-56 object-cover object-top">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
-                        <h3 class="text-xl font-bold text-dark">Sri Charan</h3>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">IIT Bombay (Computer Science)</p>
-                        <p class="text-gray-700 italic flex-grow">“Used the one-shot revision pages & formula book — last month revision saved 3 weeks.”</p>
-                    </div>
-                </div>
-
-                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                    <img src="stu2.jpg" alt="Ananya R JEE Aspirant" class="w-full h-56 object-cover object-top">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
-                        <h3 class="text-xl font-bold text-dark">Ananya R</h3>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">JEE Aspirant</p>
-                        <p class="text-gray-700 italic flex-grow">“Clear diagrams and concise formulas made revision quick & effective.”</p>
-                    </div>
-                </div>
-
-                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
-                    <img src="st3.jpg" alt="Rahul K JEE Aspirant" class="w-full h-56 object-cover object-top">
-                    <div class="p-6 flex flex-col flex-grow">
-                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
-                        <h3 class="text-xl font-bold text-dark">Rahul K</h3>
-                        <p class="text-sm text-gray-500 mb-4 font-semibold">JEE Aspirant</p>
-                        <p class="text-gray-700 italic flex-grow">“Formula book and mind maps helped me solve numericals faster.”</p>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="subject-card reveal">
+        <div class="subject-icon chem">🧪</div>
+        <div class="subject-info">
+          <h3>Chemistry</h3>
+          <div class="subject-pages">1,247 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Physical, Organic & Inorganic — all three</li>
+            <li>Reaction mechanisms + all exceptions</li>
+            <li>GOC & Isomerism explained in detail</li>
+          </ul>
         </div>
-    </section>
-
-    <section class="py-16 px-4 bg-gray-50" id="syllabus">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-3xl font-bold text-center mb-2 text-dark">What's Inside the Bundle?</h2>
-            <p class="text-center text-gray-500 mb-10">2,700+ Pages. 100% NTA-Aligned Syllabus.</p>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                
-                <div class="bg-white rounded-2xl shadow-lg border-t-4 border-indigo-500 overflow-hidden hover:shadow-xl transition flex flex-col">
-                    <div class="p-6 pb-0">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Physics</h3>
-                        <p class="text-4xl font-extrabold text-brand mb-1">750</p>
-                        <p class="text-sm text-gray-500 uppercase tracking-wide">Handwritten Pages</p>
-                        <ul class="mt-4 space-y-2 text-sm text-gray-600 mb-6">
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Mechanics to Modern Physics</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Derivations & Diagrams</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> <strong>Bonus:</strong> Formula Sheet</li>
-                        </ul>
-                    </div>
-                    
-                    <details class="group border-t border-gray-100 mt-auto">
-                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 bg-gray-50 hover:bg-indigo-50 transition text-indigo-700 text-sm">
-                            <span>View Chapter Index</span>
-                            <span class="transition group-open:rotate-180 transform">▼</span>
-                        </summary>
-                        <div class="text-gray-600 text-xs p-4 bg-white space-y-2 h-48 overflow-y-auto custom-scrollbar">
-                            <p class="font-bold text-black">Class 11:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Units & Dimensions</li>
-                                <li>Kinematics (1D & 2D)</li>
-                                <li>Laws of Motion</li>
-                                <li>Work, Power & Energy</li>
-                                <li>Rotational Motion (High Weightage)</li>
-                                <li>Gravitation</li>
-                                <li>Solids & Fluids</li>
-                                <li>Thermal Properties & Thermodynamics</li>
-                                <li>Oscillations & Waves</li>
-                            </ul>
-                            <p class="font-bold text-black mt-2">Class 12:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Electrostatics & Capacitance</li>
-                                <li>Current Electricity</li>
-                                <li>Moving Charges & Magnetism</li>
-                                <li>EMI & AC</li>
-                                <li>Ray & Wave Optics</li>
-                                <li>Dual Nature & Atoms</li>
-                                <li>Nuclei & Semiconductors</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-lg border-t-4 border-amber-500 overflow-hidden hover:shadow-xl transition flex flex-col">
-                    <div class="p-6 pb-0">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Chemistry</h3>
-                        <p class="text-4xl font-extrabold text-accent mb-1">1247</p>
-                        <p class="text-sm text-gray-500 uppercase tracking-wide">Handwritten Pages</p>
-                        <ul class="mt-4 space-y-2 text-sm text-gray-600 mb-6">
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Physical, Organic, Inorganic</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Reaction Mechanisms</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> All Exceptions Covered</li>
-                        </ul>
-                    </div>
-
-                    <details class="group border-t border-gray-100 mt-auto">
-                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 bg-gray-50 hover:bg-amber-50 transition text-amber-700 text-sm">
-                            <span>View Chapter Index</span>
-                            <span class="transition group-open:rotate-180 transform">▼</span>
-                        </summary>
-                        <div class="text-gray-600 text-xs p-4 bg-white space-y-2 h-48 overflow-y-auto custom-scrollbar">
-                            <p class="font-bold text-black">Physical Chemistry:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Mole Concept & Redox</li>
-                                <li>Atomic Structure</li>
-                                <li>Thermodynamics & Equilibrium</li>
-                                <li>Electrochemistry & Kinetics</li>
-                                <li>Solutions & Solid State</li>
-                            </ul>
-                            <p class="font-bold text-black mt-2">Inorganic Chemistry:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Periodic Table & Bonding</li>
-                                <li>Coordination Compounds</li>
-                                <li>p-block, d-block, f-block</li>
-                                <li>Metallurgy</li>
-                            </ul>
-                            <p class="font-bold text-black mt-2">Organic Chemistry:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>GOC & Isomerism (Detailed)</li>
-                                <li>Hydrocarbons</li>
-                                <li>Haloalkanes & Haloarenes</li>
-                                <li>Aldehydes, Ketones & Acids</li>
-                                <li>Amines & Biomolecules</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-
-                <div class="bg-white rounded-2xl shadow-lg border-t-4 border-emerald-500 overflow-hidden hover:shadow-xl transition flex flex-col">
-                    <div class="p-6 pb-0">
-                        <h3 class="text-2xl font-bold text-dark mb-2">Mathematics</h3>
-                        <p class="text-4xl font-extrabold text-emerald-500 mb-1">726</p>
-                        <p class="text-sm text-gray-500 uppercase tracking-wide">Handwritten Pages</p>
-                        <ul class="mt-4 space-y-2 text-sm text-gray-600 mb-6">
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Algebra to Calculus</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Problem Solving Tricks</li>
-                            <li class="flex items-center gap-2"><span class="text-green-500">✅</span> Important PYQs Marked</li>
-                        </ul>
-                    </div>
-
-                    <details class="group border-t border-gray-100 mt-auto">
-                        <summary class="flex justify-between items-center font-bold cursor-pointer list-none p-4 bg-gray-50 hover:bg-emerald-50 transition text-emerald-700 text-sm">
-                            <span>View Chapter Index</span>
-                            <span class="transition group-open:rotate-180 transform">▼</span>
-                        </summary>
-                        <div class="text-gray-600 text-xs p-4 bg-white space-y-2 h-48 overflow-y-auto custom-scrollbar">
-                            <p class="font-bold text-black">Algebra:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Quadratic Equations</li>
-                                <li>Sequences & Series</li>
-                                <li>Binomial Theorem</li>
-                                <li>Matrices & Determinants</li>
-                                <li>Complex Numbers</li>
-                                <li>Permutations & Probability</li>
-                            </ul>
-                            <p class="font-bold text-black mt-2">Calculus:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Functions, Limits & Continuity</li>
-                                <li>Differentiation & AOD</li>
-                                <li>Indefinite & Definite Integration</li>
-                                <li>Differential Equations</li>
-                            </ul>
-                            <p class="font-bold text-black mt-2">Coordinate Geometry & Vectors:</p>
-                            <ul class="list-disc pl-4 space-y-1">
-                                <li>Straight Lines & Circles</li>
-                                <li>Conic Sections</li>
-                                <li>Vectors & 3D Geometry</li>
-                            </ul>
-                        </div>
-                    </details>
-                </div>
-            </div>
-
-            <div class="mt-10 bg-indigo-900 rounded-xl p-6 md:p-8 text-white text-center shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                    <span class="bg-red-500 text-xs font-bold px-3 py-1 rounded text-white mb-4 inline-block animate-pulse">LIMITED TIME GIFT</span>
-                    <h3 class="text-2xl font-bold mb-2">PLUS: Get 3 Free Bonuses Today</h3>
-                    <p class="text-indigo-200 text-sm mb-6 max-w-2xl mx-auto">Order now and we will include the Physics Formula Cheat Sheet, Top 100 Repeated PYQs, and the 2026 Predicted Question Paper for FREE.</p>
-                </div>
-                <div class="absolute top-0 right-0 -mr-10 -mt-10 w-40 h-40 bg-white opacity-10 rounded-full blur-2xl"></div>
-            </div>
+      </div>
+      <div class="subject-card reveal">
+        <div class="subject-icon math">📐</div>
+        <div class="subject-info">
+          <h3>Mathematics</h3>
+          <div class="subject-pages">726 handwritten pages</div>
+          <ul class="subject-bullets">
+            <li>Algebra, Calculus, Coordinate Geometry, Vectors</li>
+            <li>Problem-solving shortcuts & tricks</li>
+            <li>Important PYQs marked and solved</li>
+          </ul>
         </div>
-    </section>
-
-    
-
-    <section class="py-16 px-4 bg-offwhite">
-        <div class="max-w-3xl mx-auto text-center">
-            <h2 class="font-serif text-3xl font-bold mb-8">Does It Actually Work?</h2>
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 hide-scrollbar">
-                <div class="min-w-full snap-center bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                    <h4 class="font-bold text-lg mb-2">Score Improvement</h4>
-                    <div class="flex items-end justify-center gap-4 h-40">
-                        <div class="w-16 bg-gray-300 rounded-t-lg relative group h-[40%] flex items-end justify-center"><span class="mb-2 font-bold text-gray-600">80</span><span class="absolute -bottom-6 text-xs text-gray-500">Before</span></div>
-                        <div class="w-16 bg-green-500 rounded-t-lg relative group h-[90%] flex items-end justify-center"><span class="mb-2 font-bold text-white">160+</span><span class="absolute -bottom-6 text-xs text-gray-500 font-bold">After</span></div>
-                    </div>
-                    <p class="mt-8 italic text-gray-600">"Went from 80 to 160 in mocks in 3 weeks."</p>
-                </div>
-                <div class="min-w-full snap-center bg-white p-6 rounded-xl shadow-md border border-gray-200">
-                     <h4 class="font-bold text-lg mb-2">Revision Time</h4>
-                     <div class="flex items-end justify-center gap-4 h-40">
-                        <div class="w-16 bg-gray-300 rounded-t-lg relative h-[100%] flex items-end justify-center"><span class="mb-2 font-bold text-gray-600">5 Hrs</span><span class="absolute -bottom-6 text-xs text-gray-500">Textbook</span></div>
-                        <div class="w-16 bg-brand rounded-t-lg relative h-[30%] flex items-end justify-center"><span class="mb-2 font-bold text-white">1 Hr</span><span class="absolute -bottom-6 text-xs text-gray-500 font-bold">Notes</span></div>
-                    </div>
-                    <p class="mt-8 italic text-gray-600">"Revised full Optics in 45 mins."</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-16 px-4 bg-gray-50">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="font-serif text-3xl font-bold text-center mb-4">Unfiltered Feedback</h2>
-            <p class="text-center text-gray-500 mb-10">Real conversations. No edits.</p>
-            
-            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
-                <div class="min-w-[85%] md:min-w-[30%] snap-center rounded-xl overflow-hidden shadow-2xl border border-gray-200 transform hover:-translate-y-1 transition duration-300">
-                    <img src="s1.jpg" alt="WhatsApp Review 1" class="w-full h-auto">
-                </div>
-                <div class="min-w-[85%] md:min-w-[30%] snap-center rounded-xl overflow-hidden shadow-2xl border border-gray-200 transform hover:-translate-y-1 transition duration-300">
-                    <img src="s2.jpg" alt="WhatsApp Review 2" class="w-full h-auto">
-                </div>
-                <div class="min-w-[85%] md:min-w-[30%] snap-center rounded-xl overflow-hidden shadow-2xl border border-gray-200 transform hover:-translate-y-1 transition duration-300">
-                    <img src="s3.jpg" alt="WhatsApp Review 3" class="w-full h-auto">
-                </div>
-            </div>
-            
-            <div class="text-center mt-8">
-                <p class="text-sm font-semibold text-whatsapp flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-3.138-5.437-2.1-12.866 2.459-17.426 4.608-4.608 12.086-4.608 16.695.0 4.608 4.608 4.608 12.086.0 16.695-4.608 4.608-12.086 4.608-16.695.0l-4.146 6.894zm5.597-8.121c-2.433-4.215-1.071-9.697 3.033-12.24 4.098-2.54 9.42-1.259 11.96 2.84 2.541 4.099 1.259 9.42-2.84 11.96-2.071 1.282-4.47 1.66-6.732 1.053l-2.618 4.354 1.197-4.373c-1.424-1.127-2.671-2.375-4.0-3.594zm11.26-2.04c.839.421 1.229 1.002 1.134 1.637-.156 1.057-2.31 2.31-3.344 1.838-.458-.209-6.852-3.155-7.962-8.586-.547-2.677 1.579-4.187 2.686-3.801.428.149 1.947 3.469 1.611 4.161-.202.417-.905.972-1.229 1.11-.324.138-1.551-.047 1.109 4.332 2.054 3.382 3.829 2.508 4.195 2.14.366-.366 1.34-1.574 1.8-1.831z"/></svg>
-                    Verified WhatsApp Chats
-                </p>
-            </div>
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-     <section id="pricing" class="py-20 px-4 bg-gradient-to-b from-indigo-50 to-white relative">
-        <div class="max-w-md mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden border-2 border-accent relative z-10">
-            <div class="bg-red-500 text-white text-center py-2 text-sm font-bold animate-pulse">
-                🔥 Only 29 bundles left today
-            </div>
-
-            <div class="p-8 text-center">
-                <h2 class="font-serif text-3xl font-bold text-dark mb-2">Complete PCM Bundle</h2>
-                <div class="space-y-2 mb-6 text-sm text-gray-600 text-left bg-gray-50 p-4 rounded-lg border border-gray-100">
-                    <p class="flex items-center gap-2"><span class="text-green-500">✅</span> <strong>3000+ Handwritten Pages</strong> (PCM)</p>
-                    <p class="flex items-center gap-2"><span class="text-green-500">✅</span> <strong>FREE:</strong> "The Night Before" Formula Sheet</p>
-                    <p class="flex items-center gap-2"><span class="text-green-500">✅</span> <strong>FREE:</strong> Top 100 Repeated JEE PYQs</p>
-                    <p class="flex items-center gap-2"><span class="text-green-500">✅</span> <strong>FREE:</strong> Predicted Question Paper 2026</p>
-                    <p class="flex items-center gap-2 font-bold text-brand"><span class="text-brand">🖨️</span> High-Resolution • 100% Printable</p>
-                </div>
-
-                <div class="flex justify-center items-baseline gap-3 mb-6">
-                    <span class="text-gray-400 line-through text-2xl">₹1999</span>
-                    <span class="text-5xl font-extrabold text-brand">₹799</span>
-                </div>
-
-                <div class="bg-orange-50 border border-orange-200 rounded-lg p-3 mb-6">
-                    <p class="text-xs text-orange-800 font-bold mb-1">Offer expires when timer hits 00:00</p>
-                    <p id="offer-timer" class="text-xl font-mono font-bold text-red-600">00:00:00</p>
-                </div>
-
-                <a href="https://payments.cashfree.com/forms?code=iit-jee-pcm-799-notes" target="_blank" class="flex items-center justify-center gap-2 w-full bg-accent hover:bg-amber-600 text-white text-xl font-bold py-4 rounded-xl shadow-lg transition transform hover:scale-[1.02] mb-2">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                    GET INSTANT ACCESS 
-                </a>
-                <p class="text-xs text-gray-500 mb-4">📥 PDF Link sent to email in 10 seconds.</p>
-
-                <div class="flex items-center justify-center gap-2 text-xs text-gray-600 bg-gray-100 p-2 rounded">
-                    <span>🔒</span> 100% Quality Guarantee. Reviewed by IITians.
-                </div>
-
-                <p class="text-xs text-gray-500 mt-4 flex items-center justify-center gap-2">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    73 students purchased in the last 24 hours
-                </p>
-            </div>
-            
-        </div>
-    </section>
-
-
-
-
-
-
-    
-
-           
-    <section class="py-16 px-4 max-w-3xl mx-auto">
-        <h2 class="font-serif text-2xl font-bold text-center mb-8">Frequently Asked Questions</h2>
-        <div class="space-y-4">
-            <details class="group bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-dark">
-                    Is this for JEE Main or Advanced?
-                    <span class="transition group-open:rotate-180">▼</span>
-                </summary>
-                <p class="mt-3 text-gray-600 text-sm">Both. The notes cover NCERT basics up to Advanced level problem-solving techniques.</p>
-            </details>
-            <details class="group bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-dark">
-                    How do I get the notes?
-                    <span class="transition group-open:rotate-180">▼</span>
-                </summary>
-                <p class="mt-3 text-gray-600 text-sm">Immediately after payment, you will receive an email with the PDF download link. It takes less than 10 seconds.</p>
-            </details>
-            <details class="group bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-dark">
-                    Can I take a printout?
-                    <span class="transition group-open:rotate-180">▼</span>
-                </summary>
-                <p class="mt-3 text-gray-600 text-sm">Yes! The PDFs are high quality and optimized for printing.</p>
-            </details>
-            <details class="group bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-dark">
-                    Is the formula sheet free?
-                    <span class="transition group-open:rotate-180">▼</span>
-                </summary>
-                <p class="mt-3 text-gray-600 text-sm">Yes, the 40-page Physics Formula Sheet is included as a FREE bonus with this bundle.</p>
-            </details>
-            <details class="group bg-white p-4 rounded-lg shadow-sm border border-gray-200">
-                <summary class="font-bold cursor-pointer list-none flex justify-between items-center text-dark">
-                    What if I don't receive the email?
-                    <span class="transition group-open:rotate-180">▼</span>
-                </summary>
-                <p class="mt-3 text-gray-600 text-sm">Check your spam folder. If not there, WhatsApp us, and we will resend it instantly. Guaranteed.</p>
-            </details>
-        </div>
-    </section>
-
-    <section class="py-20 px-4 bg-dark text-white text-center">
-        <h2 class="font-serif text-3xl font-bold mb-4">Don't Waste Another Day.</h2>
-        <p class="text-gray-400 mb-8 max-w-lg mx-auto">Start revising efficiently with notes that have helped 4000+ students improve their rank.</p>
-        
-        <a href="https://payments.cashfree.com/forms?code=iit-jee-pcm-799-notes" target="_blank" class="inline-block bg-accent text-white font-bold text-xl py-4 px-12 rounded-full shadow-xl hover:bg-amber-600 transition">
-            Get Instant Access
-        </a>
-        
-        <p class="mt-6 text-sm text-gray-500">If your link ever fails, we resend instantly — guaranteed.</p>
-    </section>
-
-    <footer class="bg-slate-900 text-slate-500 py-10 px-4 text-center text-sm pb-32">
-        <div class="font-serif text-2xl font-bold text-white mb-4">iitjeenote.com</div>
-        <p class="mb-2">Managed by iihub llp</p>
-        <p class="mb-2">Website: iitjeenote.com | Email: support@iitjeenote.com</p>
-        <div class="flex justify-center gap-4 mt-4">
-    <a href="privacy.html" class="hover:text-white">Privacy Policy</a>
-    <a href="terms.html" class="hover:text-white">Terms & Conditions</a>
-    <a href="refund.html" onclick="fbq('trackCustom', 'CheckedRefundPolicy');" class="hover:text-white">Refund Policy</a>
-</div>
-        <p class="mt-8 text-xs">&copy; 2025 iiTuitions. All rights reserved.</p>
-    </footer>
-
-    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-3 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-50 flex items-center justify-between md:hidden">
-        <div class="pl-2">
-            <p class="text-xs text-gray-500 line-through">₹1999</p>
-            <p class="font-bold text-xl text-brand">₹799</p>
-        </div>
-        
-        <a href="https://payments.cashfree.com/forms?code=iit-jee-pcm-799-notes" target="_blank" class="bg-accent text-white font-bold py-3 px-6 rounded-full shadow-lg hover:bg-amber-600 transition animate-pulse flex items-center gap-2">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            GET INSTANT ACCESS ⚡
-        </a>
+      </div>
     </div>
-    <a href="https://wa.me/918639221271" target="_blank" class="fixed bottom-20 right-4 md:bottom-8 md:right-8 z-50 bg-[#25D366] text-white p-3 rounded-full shadow-2xl hover:scale-110 transition flex items-center gap-2 group">
-        <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-3.138-5.437-2.1-12.866 2.459-17.426 4.608-4.608 12.086-4.608 16.695.0 4.608 4.608 4.608 12.086.0 16.695-4.608 4.608-12.086 4.608-16.695.0l-4.146 6.894zm5.597-8.121c-2.433-4.215-1.071-9.697 3.033-12.24 4.098-2.54 9.42-1.259 11.96 2.84 2.541 4.099 1.259 9.42-2.84 11.96-2.071 1.282-4.47 1.66-6.732 1.053l-2.618 4.354 1.197-4.373c-1.424-1.127-2.671-2.375-4.0-3.594zm11.26-2.04c.839.421 1.229 1.002 1.134 1.637-.156 1.057-2.31 2.31-3.344 1.838-.458-.209-6.852-3.155-7.962-8.586-.547-2.677 1.579-4.187 2.686-3.801.428.149 1.947 3.469 1.611 4.161-.202.417-.905.972-1.229 1.11-.324.138-1.551-.047 1.109 4.332 2.054 3.382 3.829 2.508 4.195 2.14.366-.366 1.34-1.574 1.8-1.831z"/></svg>
-        <span class="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap font-bold text-sm">Chat with us</span>
-    </a>
 
-    <script>
-        // 1. JEE Countdown
-        const jeeDate = new Date("Jan 21, 2026 00:00:00").getTime();
-        const daysEl = document.getElementById("days");
-        const hoursEl = document.getElementById("hours");
-        const minsEl = document.getElementById("mins");
+    <div class="total-banner reveal">
+      <div class="num">2,723</div>
+      <div class="lbl">Total pages covering<br><strong>11th & 12th complete syllabus</strong></div>
+    </div>
+  </div>
+</section>
 
-        setInterval(() => {
-            const now = new Date().getTime();
-            const distance = jeeDate - now;
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            daysEl.innerText = days; hoursEl.innerText = hours; minsEl.innerText = minutes;
-        }, 1000);
+<div class="section-line"></div>
 
-        // 2. Offer Countdown
-        function startDailyTimer() {
-            const now = new Date();
-            const midnight = new Date(now);
-            midnight.setHours(23, 59, 59, 999);
-            setInterval(() => {
-                const currentTime = new Date();
-                const diff = midnight - currentTime;
-                const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const m = Math.floor((diff / (1000 * 60)) % 60);
-                const s = Math.floor((diff / 1000) % 60);
-                document.getElementById("offer-timer").innerText = `${h.toString().padStart(2, '0')}:${m.toString().padStart(2, '0')}:${s.toString().padStart(2, '0')}`;
-            }, 1000);
-        }
-        startDailyTimer();
+<!-- ═══════════════════════════════════════════
+     SECTION 3: PROOF
+     ═══════════════════════════════════════════ -->
+<section class="proof" id="proof">
+  <div class="container">
+    <div class="section-label reveal">Real Results</div>
+    <h2 class="section-title reveal">Students don't just read.<br>They <span style="color:var(--green)">score higher</span>.</h2>
 
-        // 3. Tab Switcher
-        function switchTab(subject) {
-            document.getElementById('phy-slides').classList.add('hidden');
-            document.getElementById('chem-slides').classList.add('hidden');
-            document.getElementById('math-slides').classList.add('hidden');
-            const btns = document.querySelectorAll('.tab-btn');
-            btns.forEach(btn => {
-                btn.classList.remove('bg-brand', 'text-white');
-                btn.classList.add('bg-white', 'text-gray-600');
-            });
-            document.getElementById(subject + '-slides').classList.remove('hidden');
-            const activeBtn = document.getElementById('btn-' + subject);
-            activeBtn.classList.remove('bg-white', 'text-gray-600');
-            activeBtn.classList.add('bg-brand', 'text-white');
-        }
+    <div class="score-jump reveal">
+      <div class="top-line"></div>
+      <div class="arrow-row">
+        <div class="score-block">
+          <div class="score-label">Before</div>
+          <div class="score-num before">80</div>
+        </div>
+        <div class="score-arrow">→</div>
+        <div class="score-block">
+          <div class="score-label">After 3 Weeks</div>
+          <div class="score-num after">160+</div>
+        </div>
+      </div>
+      <p class="score-quote">"Went from 80 to 160+ in mocks in just 3 weeks using these notes."</p>
+    </div>
 
-        // 4. Hero Slider Automation
-        let currentSlide = 0;
-        const slider = document.getElementById('hero-slider');
-        setInterval(() => {
-            currentSlide = (currentSlide + 1) % 3;
-            slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }, 4000);
+    <div class="revision-time reveal">
+      <div class="time-block">
+        <div class="time-val slow">5 hrs</div>
+        <div class="time-lbl">Textbook revision</div>
+      </div>
+      <div class="vs-divider">vs</div>
+      <div class="time-block">
+        <div class="time-val fast">1 hr</div>
+        <div class="time-lbl">With these notes</div>
+      </div>
+    </div>
 
-        // 5. Lazy Load Video
-        function loadVideo() {
-            const container = document.getElementById('video-container');
-            container.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/JZgNJtitRek?rel=0&modestbranding=1" title="Note Flipthrough" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>';
-        }
-    </script>
+    <div class="wa-grid reveal">
+      <div class="wa-screenshot">
+        <div class="wa-placeholder"><span class="wa-icon">💬</span><span>WhatsApp<br>Review #1</span></div>
+      </div>
+      <div class="wa-screenshot">
+        <div class="wa-placeholder"><span class="wa-icon">💬</span><span>WhatsApp<br>Review #2</span></div>
+      </div>
+      <div class="wa-screenshot">
+        <div class="wa-placeholder"><span class="wa-icon">💬</span><span>WhatsApp<br>Review #3</span></div>
+      </div>
+    </div>
+    <p class="wa-caption reveal">✅ Verified WhatsApp conversations — unedited</p>
+
+    <div class="testimonial reveal">
+      <div class="testimonial-avatar">SC</div>
+      <div class="testimonial-body">
+        <div class="testimonial-stars">★★★★★</div>
+        <p class="testimonial-text">"Used the one-shot revision pages and formula book — my last month revision saved me 3 weeks. Absolute game-changer."</p>
+        <div class="testimonial-name">Sri Charan</div>
+        <div class="testimonial-tag">IIT Bombay — Computer Science</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4: PRICING
+     ═══════════════════════════════════════════ -->
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section-label reveal">Limited Time Offer</div>
+    <h2 class="section-title reveal">One bundle. One price.</h2>
+
+    <div class="pricing-card reveal">
+      <div class="pricing-card-badge">Complete PCM Bundle</div>
+      <h3 class="pricing-title">Handwritten JEE Notes</h3>
+
+      <div class="pricing-items">
+        <div class="pricing-item"><span class="check">✓</span><span><strong>2,700+ handwritten pages</strong> — PCM</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Class 11th & 12th complete syllabus</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>High-resolution PDF — 100% printable</span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Reviewed by IIT Bombay Alumni Faculty <span class="iit-tag">VERIFIED</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>"Night Before" Formula Sheet <span class="free-badge">FREE</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Top 100 Repeated JEE PYQs <span class="free-badge">FREE</span></span></div>
+        <div class="pricing-item"><span class="check">✓</span><span>Predicted Question Paper 2026 <span class="free-badge">FREE</span></span></div>
+      </div>
+
+      <hr class="pricing-divider">
+
+      <div class="pricing-price">
+        <span class="old">₹2,499</span>
+        <span class="new">₹799</span>
+      </div>
+      <p class="pricing-save">You save ₹1,700 — Lifetime access</p>
+      <p class="pricing-per-page">Just <strong>₹0.29 per page</strong> — cheaper than photocopying from a friend</p>
+
+      <div class="pricing-urgency">
+        <span class="fire">🔥</span>
+        <span class="text">This price expires in</span>
+        <span class="timer" id="offer-timer-pricing">15:00</span>
+      </div>
+
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">📥 PDF link sent to email in 10 seconds</p>
+
+      <div class="pricing-fomo">
+        <span class="dot"></span>
+        <span><strong id="fomo-count-2">73</strong> parents purchased in the last 8 hours</span>
+      </div>
+
+      <div class="parent-trust">
+        <div class="line"><span class="icon">🔒</span> Secure payment via Cashfree (UPI, Card, NetBanking)</div>
+        <div class="line"><span class="icon">🖨️</span> 100% printable — your child gets physical notes on their desk</div>
+        <div class="line"><span class="icon">💬</span> Any issues? WhatsApp us — instant response guaranteed</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-line"></div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5: FAQ + FINAL CTA
+     ═══════════════════════════════════════════ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="section-label reveal">Questions?</div>
+    <h2 class="section-title reveal">Parents Ask Us</h2>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is this for JEE Main or Advanced?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Both. The notes cover NCERT basics up to Advanced-level problem-solving. Whether your child is targeting Main or Advanced, they're fully covered.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>How does my child receive the notes?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Immediately after payment, a PDF download link is sent to the email you provide — within 10 seconds. Your child can start studying instantly, and you can print the notes for their desk.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Who wrote and reviewed these notes?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Written by AIR &lt;100 JEE toppers and reviewed by IIT Bombay Alumni Faculty. Every page is error-checked, NTA-aligned, and follows the latest exam pattern.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>Is the payment secure?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Yes. Payments are processed through Cashfree, a RBI-regulated payment gateway. You can pay via UPI, debit/credit card, or net banking — all fully secure.</div></div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <span>What if we don't receive the email?</span>
+          <span class="arrow">▾</span>
+        </div>
+        <div class="faq-a"><div class="faq-a-inner">Check spam/promotions folder first. If it's not there, WhatsApp us and we'll resend instantly — guaranteed. No parent has ever not received their notes.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <div class="container">
+    <h2 class="final-headline reveal">Give your child the revision<br>advantage 4,312+ students have.</h2>
+    <p class="final-sub reveal">₹799 for 2,700+ pages of topper-quality notes. Reviewed by IIT Bombay faculty. Instant delivery.</p>
+    <div class="final-timer-row reveal">
+      <span class="label">⏰ This price expires in</span>
+      <span class="timer" id="offer-timer-final">15:00</span>
+    </div>
+    <div class="reveal">
+      <a href="https://payments.cashfree.com/forms/IIT-JEE-PCM" class="cta-btn">Get Instant Access — ₹799 ⚡</a>
+      <p class="cta-sub">Lifetime access · Printable · Instant delivery</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="brand">iitjeenote.com</div>
+    <div class="links">
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="refund.html">Refund</a>
+    </div>
+    <p class="copy">Managed by iihub llp · support@iitjeenote.com · © 2025 iiTuitions</p>
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/918639221271" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// ═══ SUBJECT TAB SWITCHING ═══
+function switchSubject(subject){
+  // Update tabs
+  document.querySelectorAll('.subject-tab').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.subject-tab[data-subject="${subject}"]`).classList.add('active');
+
+  // Update panels
+  document.querySelectorAll('.carousel-panel').forEach(p=>p.classList.remove('active'));
+  document.getElementById(`panel-${subject}`).classList.add('active');
+
+  // Reset scroll position
+  const track=document.querySelector(`#panel-${subject} .carousel-track`);
+  if(track)track.scrollLeft=0;
+
+  // Reset dots
+  resetDots(subject);
+}
+
+// ═══ DOT INDICATORS ═══
+function updateDots(subject){
+  const panel=document.getElementById(`panel-${subject}`);
+  const track=panel.querySelector('.carousel-track');
+  const slides=track.querySelectorAll('.note-slide');
+  const dots=panel.querySelectorAll('.carousel-dot');
+
+  if(!slides.length||!dots.length)return;
+
+  const slideWidth=slides[0].offsetWidth+10; // width + gap
+  const scrollPos=track.scrollLeft;
+  const activeIndex=Math.round(scrollPos/slideWidth);
+  const clampedIndex=Math.min(activeIndex,dots.length-1);
+
+  dots.forEach((d,i)=>{
+    d.classList.toggle('active',i===clampedIndex);
+  });
+}
+
+function resetDots(subject){
+  const dots=document.querySelectorAll(`#panel-${subject} .carousel-dot`);
+  dots.forEach((d,i)=>d.classList.toggle('active',i===0));
+}
+
+// ═══ SESSION TIMER (15 min) ═══
+(function(){
+  const KEY='iitjee_offer_end';
+  let end;
+  try{
+    const s=sessionStorage.getItem(KEY);
+    if(s&&parseInt(s)>Date.now()){end=parseInt(s);}
+    else{end=Date.now()+900000;sessionStorage.setItem(KEY,end.toString());}
+  }catch(e){end=Date.now()+900000;}
+
+  function fmt(ms){
+    if(ms<=0)return'00:00';
+    const m=Math.floor(ms/60000),s=Math.floor((ms%60000)/1000);
+    return String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+  }
+  function tick(){
+    const r=end-Date.now();
+    const d=fmt(r);
+    ['offer-timer-hero','offer-timer-pricing','offer-timer-final'].forEach(id=>{
+      const el=document.getElementById(id);
+      if(!el)return;
+      if(r<=0){el.textContent='EXPIRED';el.style.animation='blink 1s infinite';return;}
+      el.textContent=d;
+      if(r<300000)el.style.color='#FF3333';
+    });
+    if(r>0)requestAnimationFrame(tick);
+  }
+  tick();
+})();
+
+// ═══ FOMO ═══
+(function(){
+  const c=73+Math.floor(Math.random()*10)-3;
+  document.getElementById('fomo-count').textContent=c;
+  document.getElementById('fomo-count-2').textContent=c;
+})();
+
+// ═══ FAQ ═══
+function toggleFaq(el){
+  const item=el.parentElement;
+  const open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!open)item.classList.add('open');
+}
+
+// ═══ SCROLL REVEAL ═══
+(function(){
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}
+    });
+  },{threshold:0.12});
+  document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+})();
+</script>
 </body>
 </html>
