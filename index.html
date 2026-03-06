@@ -681,164 +681,70 @@ footer .copy{font-size:11px;color:var(--text-muted);}
     </div>
 
     <!-- ═══ NOTE PREVIEW CAROUSEL ═══ -->
-    <div class="preview-section">
-      <div class="preview-header">
-        <span class="preview-label">👇 See actual pages from the notes</span>
-        <span class="preview-swipe-hint">← Swipe →</span>
-      </div>
+   <section class="py-16 px-4 bg-offwhite">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-center mb-2">See Inside The Notes</h2>
+            <p class="text-center text-gray-600 mb-8">Real scanned pages. Clarity guaranteed.</p>
 
-      <!-- Subject Tabs -->
-      <div class="subject-tabs">
-        <button class="subject-tab active" data-subject="physics" onclick="switchSubject('physics')">⚛️ Physics</button>
-        <button class="subject-tab" data-subject="chemistry" onclick="switchSubject('chemistry')">🧪 Chemistry</button>
-        <button class="subject-tab" data-subject="maths" onclick="switchSubject('maths')">📐 Maths</button>
-      </div>
+            <div class="flex justify-center gap-4 mb-6">
+                <button onclick="switchTab('phy')" id="btn-phy" class="tab-btn px-6 py-2 rounded-full font-bold bg-brand text-white shadow-lg transition">Physics</button>
+                <button onclick="switchTab('chem')" id="btn-chem" class="tab-btn px-6 py-2 rounded-full font-bold bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 transition">Chemistry</button>
+                <button onclick="switchTab('math')" id="btn-math" class="tab-btn px-6 py-2 rounded-full font-bold bg-white text-gray-600 border border-gray-200 hover:bg-gray-50 transition">Maths</button>
+            </div>
 
-      <div class="carousel-panels">
+            <div class="relative min-h-[400px] md:min-h-[500px]">
+                
+               <div id="phy-slides" class="carousel-container flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"></div>
 
-        <!-- PHYSICS — 3 images -->
-        <div class="carousel-panel active" data-subject="physics" id="panel-physics">
-          <div class="carousel-track" onscroll="updateDots('physics')">
-            <div class="note-slide">
-              <!-- REPLACE: <img src="physics-1.jpg" alt="Physics diagram - Optics ray diagram"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">📊</span>
-                <span class="ph-text">Circuit / Optics Diagram<br>Clean hand-drawn visuals</span>
-                <span class="ph-filename">physics-1.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Clean Diagrams</span>
-                <span class="page-num">Page 1 of 750</span>
-              </div>
+<script>
+const phyContainer = document.getElementById("phy-slides");
+
+for (let i = 2; i <= 6; i++) {
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="ppp${i}.jpg" class="w-full h-[600px] object-contain bg-white" alt="Physics Sample ${i}">`;
+
+    phyContainer.appendChild(div);
+}
+</script>
+
+<div id="chem-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"> </div>
+
+<script>
+const chemContainer = document.getElementById("chem-slides");
+
+for (let i = 1; i <= 5; i++) {
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="ccc${i}.jpg" class="w-full h-[680px] object-contain bg-white" alt="Chemistry Sample ${i}">`;;
+
+    chemContainer.appendChild(div);
+}
+</script>
+
+<div id="math-slides" class="carousel-container hidden flex gap-4 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 px-2"> </div>
+    
+<script>
+const mathContainer = document.getElementById("math-slides");
+
+for (let i = 1; i <= 5; i++) {  
+    const div = document.createElement("div");
+    div.className = "min-w-[80%] md:min-w-[40%] snap-center rounded-lg shadow-xl overflow-hidden border border-gray-200 bg-white hover:scale-[1.01] transition duration-300";
+
+    div.innerHTML = `<img src="mmm${i}.jpg" class="w-full h-[680px] object-contain bg-white" alt="Maths Sample ${i}">`;;
+
+    mathContainer.appendChild(div);
+}
+</script>
+
+                
+                <p class="text-center text-xs text-gray-400 mt-2">← Swipe to see more pages →</p>
             </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="physics-2.jpg" alt="Physics derivation - step by step"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">📝</span>
-                <span class="ph-text">Step-by-step Derivation<br>Full working shown</span>
-                <span class="ph-filename">physics-2.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Full Derivations</span>
-                <span class="page-num">Page 2 of 750</span>
-              </div>
-            </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="physics-3.jpg" alt="Physics formula cheat sheet"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">⚡</span>
-                <span class="ph-text">Formula Cheat Sheet<br>Quick revision page</span>
-                <span class="ph-filename">physics-3.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Formula Sheet</span>
-                <span class="page-num">Page 3 of 750</span>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-dots" id="dots-physics">
-            <span class="carousel-dot active"></span>
-            <span class="carousel-dot"></span>
-            <span class="carousel-dot"></span>
-          </div>
         </div>
+    </section>
 
-        <!-- CHEMISTRY — 3 images -->
-        <div class="carousel-panel" data-subject="chemistry" id="panel-chemistry">
-          <div class="carousel-track" onscroll="updateDots('chemistry')">
-            <div class="note-slide">
-              <!-- REPLACE: <img src="chemistry-1.jpg" alt="Organic reaction mechanism"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">🔬</span>
-                <span class="ph-text">Organic Reaction Mechanism<br>Arrow-pushing explained</span>
-                <span class="ph-filename">chemistry-1.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Reaction Mechanisms</span>
-                <span class="page-num">Page 1 of 1,247</span>
-              </div>
-            </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="chemistry-2.jpg" alt="Inorganic chemistry chart"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">📋</span>
-                <span class="ph-text">Inorganic Chart / Table<br>All exceptions covered</span>
-                <span class="ph-filename">chemistry-2.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Inorganic Charts</span>
-                <span class="page-num">Page 2 of 1,247</span>
-              </div>
-            </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="chemistry-3.jpg" alt="Physical chemistry numerical"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">🧮</span>
-                <span class="ph-text">Physical Chemistry Numerical<br>Solved step-by-step</span>
-                <span class="ph-filename">chemistry-3.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Solved Numericals</span>
-                <span class="page-num">Page 3 of 1,247</span>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-dots" id="dots-chemistry">
-            <span class="carousel-dot active"></span>
-            <span class="carousel-dot"></span>
-            <span class="carousel-dot"></span>
-          </div>
-        </div>
-
-        <!-- MATHS — 3 images -->
-        <div class="carousel-panel" data-subject="maths" id="panel-maths">
-          <div class="carousel-track" onscroll="updateDots('maths')">
-            <div class="note-slide">
-              <!-- REPLACE: <img src="maths-1.jpg" alt="Coordinate geometry graphs"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">📈</span>
-                <span class="ph-text">Coordinate Geometry<br>Graphs & visual methods</span>
-                <span class="ph-filename">maths-1.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Visual Methods</span>
-                <span class="page-num">Page 1 of 726</span>
-              </div>
-            </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="maths-2.jpg" alt="Integration calculus solved"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">∫</span>
-                <span class="ph-text">Integration / Calculus<br>Solved with shortcuts</span>
-                <span class="ph-filename">maths-2.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">Calculus Shortcuts</span>
-                <span class="page-num">Page 2 of 726</span>
-              </div>
-            </div>
-            <div class="note-slide">
-              <!-- REPLACE: <img src="maths-3.jpg" alt="Maths tricks and PYQs"> -->
-              <div class="img-placeholder">
-                <span class="ph-icon">💡</span>
-                <span class="ph-text">Tricks + Marked PYQs<br>Exam-focused shortcuts</span>
-                <span class="ph-filename">maths-3.jpg</span>
-              </div>
-              <div class="caption">
-                <span class="tag">PYQ Shortcuts</span>
-                <span class="page-num">Page 3 of 726</span>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-dots" id="dots-maths">
-            <span class="carousel-dot active"></span>
-            <span class="carousel-dot"></span>
-            <span class="carousel-dot"></span>
-          </div>
-        </div>
-
-      </div><!-- /carousel-panels -->
-    </div><!-- /preview-section -->
 
     <!-- CTA after seeing previews -->
     <div class="hero-cta-wrap">
