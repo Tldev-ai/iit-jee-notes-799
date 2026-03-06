@@ -9,25 +9,35 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Outfit:wght@600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0A0A0F;
-  --surface:#111119;
-  --surface-2:#1A1A25;
-  --surface-3:#22222F;
-  --accent:#FF6B2C;
-  --accent-glow:#FF8A50;
-  --accent-dark:#E5551A;
-  --green:#22C55E;
-  --green-soft:#16A34A;
-  --yellow:#FBBF24;
+  --bg:#FDFDFC;
+  --surface:#FFFFFF;
+  --surface-2:#F9FAFB;
+  --surface-3:#F3F4F6;
+
+  --accent:#F59E0B;       /* Amber CTA */
+  --accent-glow:#FBBF24;
+  --accent-dark:#D97706;
+
+  --brand:#4F46E5;        /* Indigo brand */
+
+  --green:#10B981;
+  --green-soft:#059669;
+
+  --yellow:#F59E0B;
+
   --red:#EF4444;
-  --red-soft:rgba(239,68,68,0.1);
-  --blue:#60A5FA;
-  --blue-bg:rgba(59,130,246,0.08);
-  --blue-border:rgba(59,130,246,0.2);
-  --text:#F1F1F5;
-  --text-dim:#9898A6;
-  --text-muted:#6B6B7B;
-  --border:#2A2A38;
+  --red-soft:rgba(239,68,68,0.08);
+
+  --blue:#4F46E5;
+  --blue-bg:rgba(79,70,229,0.08);
+  --blue-border:rgba(79,70,229,0.2);
+
+  --text:#0F172A;
+  --text-dim:#475569;
+  --text-muted:#64748B;
+
+  --border:#E5E7EB;
+
   --radius:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -50,7 +60,7 @@ body{
   font-size:17px;font-weight:700;
   border:none;border-radius:14px;cursor:pointer;
   text-decoration:none;transition:all 0.2s ease;
-  box-shadow:0 4px 24px rgba(255,107,44,0.35);
+  box-shadow:0 4px 24px rgba(245,158,11,0.35);
   position:relative;overflow:hidden;
 }
 .cta-btn::before{
@@ -146,7 +156,7 @@ body{
   animation:fadeInUp 0.5s 0.05s ease both;
 }
 .hero h1 .highlight{
-  background:linear-gradient(135deg,var(--accent),#FF9A5C);
+  background:linear-gradient(135deg,#4F46E5,#6366F1);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   background-clip:text;
 }
