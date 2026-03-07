@@ -702,6 +702,87 @@ footer .copy{font-size:11px;color:var(--text-muted);}
   .price-row .new{font-size:36px;}
   .subject-tab{padding:7px 14px;font-size:12px;}
 }
+
+  /* ═══ RESULTS & SUCCESS STORIES ═══ */
+
+.success-section{
+  padding:40px 0;
+  background:var(--surface);
+}
+
+.success-header{
+  text-align:center;
+  margin-bottom:22px;
+}
+
+.success-header h2{
+  font-family:'Outfit',sans-serif;
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:6px;
+}
+
+.success-header p{
+  font-size:14px;
+  color:var(--text-muted);
+}
+
+.success-scroll{
+  display:flex;
+  gap:14px;
+  overflow-x:auto;
+  scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+
+.success-scroll::-webkit-scrollbar{
+  display:none;
+}
+
+.success-card{
+  flex:0 0 75%;
+  scroll-snap-align:start;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 6px 18px rgba(0,0,0,0.06);
+}
+
+.success-card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+
+.success-body{
+  padding:14px;
+}
+
+.success-stars{
+  color:#F59E0B;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.success-name{
+  font-family:'Sora',sans-serif;
+  font-weight:700;
+  font-size:16px;
+}
+
+.success-rank{
+  font-size:12px;
+  color:var(--text-muted);
+  margin-bottom:6px;
+}
+
+.success-text{
+  font-size:13px;
+  color:var(--text-dim);
+  line-height:1.5;
+}
 </style>
 </head>
 <body>
@@ -1026,19 +1107,49 @@ footer .copy{font-size:11px;color:var(--text-muted);}
 
 <p class="wa-caption reveal">✅ Verified WhatsApp conversations — unedited</p>
 
-    <div class="testimonial reveal">
-      <div class="testimonial-avatar">SC</div>
-      <div class="testimonial-body">
-        <div class="testimonial-stars">★★★★★</div>
-        <p class="testimonial-text">"Used the one-shot revision pages and formula book — my last month revision saved me 3 weeks. Absolute game-changer."</p>
-        <div class="testimonial-name">Sri Charan</div>
-        <div class="testimonial-tag">IIT Bombay — Computer Science</div>
-      </div>
-    </div>
-  </div>
+   
 </section>
 
 <div class="section-line"></div>
+
+  <section class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-serif text-3xl font-bold text-center mb-2">Results & Success Stories</h2>
+            <p class="text-center text-gray-600 mb-10">Real students. Real Ranks.</p>
+            
+            <div class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 hide-scrollbar">
+                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="stu1.jpg" alt="Sri Charan IIT Bombay" class="w-full h-56 object-cover object-top">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
+                        <h3 class="text-xl font-bold text-dark">Sri Charan</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">IIT Bombay (Computer Science)</p>
+                        <p class="text-gray-700 italic flex-grow">“Used the one-shot revision pages & formula book — last month revision saved 3 weeks.”</p>
+                    </div>
+                </div>
+
+                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="stu2.jpg" alt="Ananya R JEE Aspirant" class="w-full h-56 object-cover object-top">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
+                        <h3 class="text-xl font-bold text-dark">Ananya R</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">JEE Aspirant</p>
+                        <p class="text-gray-700 italic flex-grow">“Clear diagrams and concise formulas made revision quick & effective.”</p>
+                    </div>
+                </div>
+
+                <div class="min-w-[85%] md:min-w-[30%] snap-center bg-offwhite rounded-2xl shadow-lg border border-gray-200 overflow-hidden flex flex-col">
+                    <img src="st3.jpg" alt="Rahul K JEE Aspirant" class="w-full h-56 object-cover object-top">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex items-center mb-2 text-brand">★★★★★</div>
+                        <h3 class="text-xl font-bold text-dark">Rahul K</h3>
+                        <p class="text-sm text-gray-500 mb-4 font-semibold">JEE Aspirant</p>
+                        <p class="text-gray-700 italic flex-grow">“Formula book and mind maps helped me solve numericals faster.”</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 <!-- ═══════════════════════════════════════════
      SECTION 4: PRICING
